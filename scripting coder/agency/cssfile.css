@@ -1,0 +1,34 @@
+button {
+  			background-color:white;
+  			border-radius:5px;
+  		}
+  		img {
+    max-width: 100%;
+    height: auto;
+}
+  		#hb{
+  			background: #6f00ff;
+  			font-weight: bold;
+  		}
+  		#i{
+  			font-weight: bolder;
+  		}
+  		#abc{
+  			background:darkblue;
+  		}
+  		#abb{
+  			font-weight: bold;
+  			color: white;
+  		}
+  		#ia{
+  			font-size: 130%;
+  			line-height: 170%;
+  		}
+  		#ib{
+  			font-size: 170%;
+  			line-height: 215%;
+  		}
+  		#ic{
+  			font-size: 130%;
+  			line-height: 215%;
+  		}

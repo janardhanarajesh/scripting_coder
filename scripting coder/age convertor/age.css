@@ -1,0 +1,68 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+   /* justify-content: center;
+    align-items: center;*/
+     background-image:url("img/c6.png");    
+}
+
+#birthdate{
+    font-size:20px;
+    height:40px;
+    width:200px;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+.age {
+    font-size: 40px;
+    height: 40px;
+    padding: 8px 16px;
+    text-shadow: 2px 2px 8px skyblue;
+    color: darkred;
+    animation: fadeIn 3s ease-in-out;
+    text-align: center;
+}
+
+.div {
+position: relative;
+left:270px;
+top:100px;
+height: 300px;
+width:700px;
+    padding: 20px;
+    border: 8px solid;
+    background-color: orange;
+    border-radius: 15px;
+    animation: moveDown 3s ease-in-out;
+    text-align: center;
+}
+
+
+button {
+    background-color: red;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
+}

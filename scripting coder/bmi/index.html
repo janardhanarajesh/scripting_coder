@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BMI CALUCLATOR</title>
+	<style type="text/css">
+		p{
+			font-size: 40px;
+			color:white;
+		}
+		/**{
+			backdrop-filter: brightness(96%);
+		}*/
+label{
+	color:mintcream;
+}
+a{
+	text-decoration: none;
+	color: red;
+}
+ a:hover{
+        font-size: 20px;
+    }
+
+	</style>
+
+<body background="mainimg.jpg" style="background-repeat: no-repeat;background-size: 1279px 850px;">
+		<button onclick="clickt()" style="width:50px;height:30px;position:fixed;box-shadow: 1px 1px 8px mediumturquoise;background-color:aliceblue ;border-radius: 5px;">Menu</button>
+			<br/>
+	
+	
+			<div style="height:320px;width:150px;background-color:rgba(80,180, 200, 0.8);position: fixed;top:50px;border-radius: 8px;text-align:center;box-shadow: 1px 1px 10px royalblue;font-size: 16px;font-weight: 30px;" id="men1">
+				<br>
+				<br>
+				<a href="main.html">Home</a>
+				<br>
+				<br>
+				<a href="caluclatorroute.html">Caluclator</a>
+				<br>
+				<br>
+				<a  href="music app/Music web.html" class='a1'>Music Player</a>
+<br>		
+<br>
+				<a href="gameroute.html"> Games</a>
+				<br>
+				<br>
+				<a href="test2.html">Notes</a>
+				<br>
+				<br>
+
+				<a href="library/books.html" >Web library</a>
+				<br>
+				<br>
+				
+				<a href="converterroute.html">Converter</a>
+<br>
+<br>
+		<a href="quize/quize1.html">quize</a>
+			</div>
+
+<center>
+	<h1 style="color:orangered;font-size:40px;">BMI CALUCLATOR</h1>
+	<form>
+		<label>ENTER WEIGHT(kg):</label>
+		<input type="number" id="inp_1" name="height" style="border-radius: 50px;">
+		<br>
+		<br>
+
+		<label>ENTER YOUR HEIGHT(cm):</label>
+		<input type="number" name="weigth" id="inp_2" style="border-radius: 50px;">
+		<br>
+		<br>
+		<br>
+
+	</form>
+		<button onclick="caluclate()" style="border-radius: 50px;">caluclate</button>
+		<button onclick="cleari()" style="border-radius: 50px;">clear</button>
+
+		<br/>
+		<br>
+
+		<h2 style="color:red">your body mass index is</h2>
+		<p id="out_1"></p>
+		<p id="out_2"></p>
+
+
+</center>
+<script type="text/javascript">
+	caluclate=()=>
+	{
+		let weigth=document.getElementById('inp_1').value;
+		let heigth=document.getElementById('inp_2').value;
+		let meter=heigth/100;
+		let heisqr=meter*meter;
+		let result=weigth/heisqr;
+		let rmi=document.getElementById('out_1').innerHTML=result;
+		if(result<=17)
+		{
+		let bmi=document.getElementById('out_2').innerHTML="you have thiness";
+
+		}
+		else if(result<18.5)
+		{
+		let bmi=document.getElementById('out_2').innerHTML="you are under weight";
+
+		}
+		else if(result<=24.9)
+		{
+		let bmi=document.getElementById('out_2').innerHTML="you are in normal weight";
+
+		}
+		else if(result==25||result<=29.9)
+		{
+		let bmi=document.getElementById('out_2').innerHTML="you are over weight";
+
+		}
+		else if(result==30)
+		{
+		let bmi=document.getElementById('out_2').innerHTML="you are obbesed";
+		
+		
+
+		}
+		else if(result==30||result<=34.9)
+		{
+		let bmi=document.getElementById('out_2').innerHTML="you are in obesity class I";
+
+		}
+		else if(result==35||result<=39.9)
+		{
+		let bmi=document.getElementById('out_2').innerHTML="you are in obesity class II";
+
+		}
+		else if(result>=40)
+		{
+		let bmi=document.getElementById('out_2').innerHTML="you are in obesity class III";
+
+		}
+	}
+	cleari=()=>
+	{
+document.getElementById('inp_1').value="";
+document.getElementById('inp_2').value="";
+document.getElementById('out_1').innerHTML="";
+
+document.getElementById('out_2').innerHTML="";
+
+	}
+	document.getElementById('men1').style.display="none"
+let i=0;
+clickt=()=>
+{
+i++;
+let kt=document.getElementById('men1').style.display="block"
+if(i==2)
+{
+let kt=document.getElementById('men1').style.display="none"
+i=0;
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>capcacitor decoder</title>
+</head>
+<body>
+<center><div style="background-color:red;height: 300px;width: 500px;margin-top: 150px;">
+	<form onsubmit="cal('e')">
+		<label>ceramic capacitor value:</label>
+		<input type="number" name="capnum" id="capval">
+	</form>
+	<button onclick="cal()">submit</button>
+</div>
+</center>
+<script type="text/javascript">
+	var capval=document.getElementById('capval');
+	var capnum=capval.value;
+	cal=()=>{
+		var capval=document.getElementById('capval');
+	var capnum=capval.value;
+console.log(capnum)
+		let first=capnum/10;
+		let firstval=capnum%10;
+		let second=first/10;
+		let secondval=first%10;
+		let third=second/10;
+		let thirdval=second%10;
+		console.log(first,firstval,second,secondval,third,thirdval);
+
+	}
+
+</script>
+</body>
+</html>

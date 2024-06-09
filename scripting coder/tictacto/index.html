@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+			padding: 0px;
+			margin:0px;
+		}
+		div {
+			font-size: 50px;
+			text-shadow: 5px 5px 6px black;
+		}
+		a{
+		text-decoration: none;
+			font-size:15px;
+			color: white;
+
+		}
+		#men1{
+			font-size: 15px;
+		}
+		 a:hover{
+        font-size: 20px;
+    }
+   
+	</style>
+</head> 
+<body background="images/mainp.jpg" style="background-size:2000px 1000px;background-repeat: no-repeat;">
+	<button onclick="clickt()" style="width:50px;height:30px;position:fixed;box-shadow: 1px 1px 8px mediumturquoise;background-color:aliceblue ;border-radius: 5px;">Menu</button>
+			<br/>
+	
+	
+			<div style="height:330px;width:150px;background-color:rgba(80,180, 200, 0.8);position: fixed;top:50px;border-radius: 8px;text-align:center;box-shadow: 1px 1px 10px royalblue;" id="men1">
+				<br>
+				<br>
+				<a href="main.html">Home</a>
+				<br>
+				<br>
+				<a href="caluclatorroute.html">Caluclator</a>
+				<br>
+				<br>
+				<a  href="music app/Music web.html" class='a1'>Music Player</a>
+<br>		
+<br>
+				<a href="gameroute.html">Games</a>
+				<br>
+				<br>
+				<a href="test2.html">Notes</a>
+				<br>
+				
+				<br><a href="library/books.html">Web library</a>
+				<br>
+				<br>
+								<a href="converterroute.html">Converter</a>
+								<br>
+<br>
+		<a href="quize/quize1.html">quiz</a>
+		<br>
+		<br>
+		<a href="periodic.html" class='a1' > periodic table</a>
+			</div>
+	<center>
+	<div style="height:65px;width:300px;font-size:40px;color: green;background:white;" id="result"></div>
+	<br>
+	<br>
+
+<div style="height:450px;width:450px;box-shadow: 20px 20px 10px black;border-radius:5px;background:bisque;outline: 10px solid sandybrown;">
+	<div style="height:150px;width:450px">
+	<div style="height:150px;width:150px;float: left;border:1px solid black;cursor: pointer;padding-top:50px;text-align: center;border-top-left-radius:5px" id="d11"  onclick="clicked('d1')" ></div>
+	<div style="height:150px;width:150px;float: left;border:1px solid black;cursor: pointer;padding-top:50px;text-align: center;" id="d12"  onclick="clicked('d2')" ></div>
+	<div style="height:150px;width:150px;float: right;border:1px solid black;cursor: pointer;padding-top:50px;text-align: center;border-top-right-radius:5px;" id="d13"  onclick="clicked('d3')"></div>
+		</div>
+	
+	<div style="height:150px;width:450px">
+	<div style="height:150px;width:150px;float: left;border:1px solid black;cursor: pointer;padding-top:50px;text-align: center;" id="d21"  onclick="clicked('d4')" ></div>
+	<div style="height:150px;width:150px;float: left;border:1px solid black;cursor: pointer;padding-top:50px;text-align: center;" id="d22"  onclick="clicked('d5')" ></div>
+	<div style="height:150px;width:150px;float: right;border:1px solid black;cursor: pointer;padding-top:50px;text-align: center;" id="d23"  onclick="clicked('d6')"></div>
+		
+	</div>
+	<div style="height:150px;width:450px">
+	<div style="height:150px;width:150px;float: left;border:1px solid black;cursor: pointer;padding-top:50px;text-align: center;border-bottom-left-radius:5px" id="d31"  onclick="clicked('d7')" ></div>
+	<div style="height:150px;width:150px;float: left;border:1px solid black;cursor: pointer;padding-top:50px;text-align: center;" id="d32"  onclick="clicked('d8')" ></div>
+	<div style="height:150px;width:150px;float: right;border:1px solid black;cursor: pointer;padding-top:50px;text-align: center;border-bottom-right-radius:5px;" id="d33" onclick="clicked('d9')" ></div>
+		
+	</div>
+
+</div>
+<br>
+
+<button onclick="cleari()" style="height:20px;width:70px">Clear</button>
+</center>
+<script type="text/javascript">
+	var i=0;
+	clicked=(k)=>
+	{
+	var div11=document.getElementById('d11').innerHTML;
+	var div12=document.getElementById('d12').innerHTML;
+	var div13=document.getElementById('d13').innerHTML;
+	var div14=document.getElementById('d21').innerHTML;
+	var div15=document.getElementById('d22').innerHTML;
+	var div16=document.getElementById('d23').innerHTML;
+	var div17=document.getElementById('d31').innerHTML;
+	var div18=document.getElementById('d32').innerHTML;
+	var div19=document.getElementById('d33').innerHTML;
+i++;
+if(k=='d1')
+{
+
+	if(div11=="")
+	{
+	if(i%2!=0)
+	{
+document.getElementById('d11').style.color="blue";
+
+	div11=document.getElementById('d11').innerHTML="O";
+	if(div11==div12&&div11==div13&&div12==div13)
+	{
+
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+
+	}
+	else if(div11==div14&&div11==div17&&div14==div17)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+
+	}
+	else if(div11==div15&&div11==div19&&div15==div19)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+
+	}
+}
+else
+{
+document.getElementById('d11').style.color="red";
+
+	div11=document.getElementById('d11').innerHTML="X";
+	if(div11==div12&&div11==div13&&div12==div13)
+	{
+document.getElementById('result').innerHTML="x won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div11==div14&&div11==div17&&div14==div17)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+
+	}
+	else if(div11==div15&&div11==div19&&div15==div19)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+
+	}
+}
+}
+}
+if(k=='d2')
+{
+	if(div12=="")
+	{
+	if(i%2!=0)
+	{
+document.getElementById('d12').style.color="blue";
+
+	div12=document.getElementById('d12').innerHTML="O";
+	if(div11==div12&&div11==div13&&div12==div13)
+	{
+document.getElementById('result').innerHTML="O won";
+setTimeout(cleari,1000)
+
+
+	}
+	else if(div12==div15&&div12==div18&&div15==div18)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+}
+else
+{
+document.getElementById('d12').style.color="red";
+
+	div12=document.getElementById('d12').innerHTML="X";
+	if(div11==div12&&div11==div13&&div12==div13)
+	{
+document.getElementById('result').innerHTML="X won";
+setTimeout(cleari,1000)
+
+
+	}
+else if(div12==div15&&div12==div18&&div15==div18)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+
+	}
+}
+}
+if(k=='d3')
+{
+	if(div13=="")
+	{
+	if(i%2!=0)
+	{
+document.getElementById('d13').style.color="blue";
+
+	div13=document.getElementById('d13').innerHTML="O";
+	if(div11==div12&&div11==div13&&div12==div13)
+	{
+document.getElementById('result').innerHTML="O won";
+setTimeout(cleari,1000)
+
+
+	}
+	else if(div13==div16&&div13==div19&&div16==div19)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div13==div15&&div13==div17&&div15==div17)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+}
+else
+{
+document.getElementById('d13').style.color="red";
+
+	div13=document.getElementById('d13').innerHTML="X";
+	if(div11==div12&&div11==div13&&div12==div13)
+	{
+document.getElementById('result').innerHTML=" x won";
+setTimeout(cleari,1000)
+
+
+	}
+	else if(div13==div16&&div13==div19&&div16==div19)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div13==div15&&div13==div17&&div15==div17)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+
+	}
+}
+}
+if(k=='d4')
+{
+	if(div14=="")
+	{
+	if(i%2!=0)
+	{
+document.getElementById('d21').style.color="blue";
+
+	div14=document.getElementById('d21').innerHTML="O"
+	if(div11==div14&&div11==div17&&div14==div17)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div14==div15&&div14==div16&&div15==div16)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+}
+else
+{
+document.getElementById('d21').style.color="red";
+
+	div14=document.getElementById('d21').innerHTML="X";
+ if(div11==div14&&div11==div17&&div14==div17)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div14==div15&&div14==div16&&div15==div16)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+
+	}
+}
+}
+if(k=='d5')
+{
+	if(div15=="")
+	{
+	if(i%2!=0)
+	{
+document.getElementById('d22').style.color="blue";
+
+	div15=document.getElementById('d22').innerHTML="O";
+	if(div11==div15&&div11==div19&&div15==div19)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div12==div15&&div12==div18&&div15==div18)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div14==div15&&div14==div16&&div15==div16)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div13==div15&&div13==div17&&div15==div17)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+}
+else
+{
+document.getElementById('d22').style.color="red";
+
+	div15=document.getElementById('d22').innerHTML="X";
+	if(div11==div15&&div11==div19&&div15==div19)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div12==div15&&div12==div18&&div15==div18)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div14==div15&&div14==div16&&div15==div16)
+	{
+document.getElementById('result').innerHTML=" X won";
+
+	}
+	else if(div13==div15&&div13==div17&&div15==div17)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+
+	}
+}
+}
+if(k=='d6')
+{
+	if(div16=="")
+	{
+	if(i%2!=0)
+	{
+document.getElementById('d23').style.color="blue";
+
+	div16=document.getElementById('d23').innerHTML="O";
+if(div13==div16&&div13==div19&&div16==div19)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div14==div15&&div14==div16&&div15==div16)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+}
+else
+{
+document.getElementById('d23').style.color="red";
+
+	div16=document.getElementById('d23').innerHTML="X";
+if(div13==div16&&div13==div19&&div16==div19)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div14==div15&&div14==div16&&div15==div16)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+
+	}
+}
+}
+if(k=='d7')
+{
+	if(div17=="")
+	{
+	if(i%2!=0)
+	{
+document.getElementById('d31').style.color="blue";
+
+	div17=document.getElementById('d31').innerHTML="O";
+ if(div11==div14&&div11==div17&&div14==div17)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div17==div18&&div17==div19&&div18==div19)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div13==div15&&div13==div17&&div15==div17)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+}
+else
+{
+document.getElementById('d31').style.color="red";
+
+	div17=document.getElementById('d31').innerHTML="X";
+if(div11==div14&&div11==div17&&div14==div17)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div17==div18&&div17==div19&&div18==div19)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+
+else if(div13==div15&&div13==div17&&div15==div17)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+	}
+}
+}
+if(k=='d8')
+{
+	if(div18=="")
+	{
+	if(i%2!=0)
+	{
+document.getElementById('d32').style.color="blue";
+
+	div18=document.getElementById('d32').innerHTML="O";
+	 if(div12==div15&&div12==div18&&div15==div18)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div17==div18&&div17==div19&&div18==div19)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+}
+else
+{
+document.getElementById('d32').style.color="red";
+
+	div18=document.getElementById('d32').innerHTML="X";
+	if(div12==div15&&div12==div18&&div15==div18)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div17==div18&&div17==div19&&div18==div19)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+
+	}
+}
+}
+if(k=='d9')
+{
+	if(div19=="")
+	{
+	if(i%2!=0)
+	{
+document.getElementById('d33').style.color="blue";
+
+div19=document.getElementById('d33').innerHTML="O";
+if(div11==div15&&div11==div19&&div15==div19)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div13==div16&&div13==div19&&div16==div19)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div17==div18&&div17==div19&&div18==div19)
+	{
+document.getElementById('result').innerHTML=" O won";
+setTimeout(cleari,1000)
+
+	}
+}
+else
+{
+document.getElementById('d33').style.color="red";
+
+	div19=document.getElementById('d33').innerHTML="X";
+if(div11==div15&&div11==div19&&div15==div19)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div13==div16&&div13==div19&&div16==div19)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+	else if(div17==div18&&div17==div19&&div18==div19)
+	{
+document.getElementById('result').innerHTML=" X won";
+setTimeout(cleari,1000)
+
+	}
+
+	}
+}
+
+}
+}
+cleari=()=>
+{
+	i=0;
+	document.getElementById('d11').innerHTML=""
+	document.getElementById('d12').innerHTML=""
+	document.getElementById('d13').innerHTML=""
+	document.getElementById('d21').innerHTML=""
+	document.getElementById('d22').innerHTML=""
+	document.getElementById('d23').innerHTML=""
+	document.getElementById('d31').innerHTML=""
+	document.getElementById('d32').innerHTML=""
+	document.getElementById('d33').innerHTML=""
+	document.getElementById('result').innerHTML=""
+
+}
+document.getElementById('men1').style.display="none"
+let j=0;
+clickt=()=>
+{
+j++;
+let kt=document.getElementById('men1').style.display="block"
+if(j==2)
+{
+let kt=document.getElementById('men1').style.display="none"
+j=0;
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html oncopy="return false" oncut="return false" >
+<!-- oncontextmenu="return false" -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>molarity<->normality</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="concentration.css">
+</head>
+ <body background="images/molity.jpg" style="background-repeat: no-repeat;background-size: cover;" >
+<div class="container-fluid">
+	<select onchange="concen(this.value)" id="mai">
+		<option value="molal">--select--</option>
+
+	<option value="mol">molarity</option>
+		<option value="nor">normality</option>
+		<option value="molity">mol<->norm</option>
+
+
+	</select>
+<div class="row mt-3"  id="main">
+	<span id="note">Note:leave the unknown value </span>
+	<center>
+	<div class="col-8 ">
+		<div class="card bg-danger">
+			<!-- first row -->
+			<div class="row-md-5">
+<label  for="mol" class="col-7">MOLARITY:</label>
+		<input type="number" id="mol" class="col-4">
+			
+	</div>
+			<!-- /first rows -->
+			<!-- second row -->
+
+	<div class="row-md-6">
+<label  for="gewt" class="col-7" >GMWT(g):</label>
+
+		<input type="number" id="gmwt" class="col-4">
+	</div>
+			<!-- //second row -->
+		<!-- third row -->
+<div class="row-md-6">
+	<label  for="norm" class="col-7" >NORMALITY:</label>
+
+		<input type="number" id="norm" class="col-4">
+	</div>
+		<!-- //third row -->
+<!-- fourth row -->
+<div class="row-md-6">
+<label  for="gewt" class="col-7">GEWT(g):</label>
+
+		<input type="number" id="gewt" class="col-4">
+</div>
+<!-- //fifth row -->
+<div class="row">
+	<center>
+	<div class="col-12">
+	<button class=" col-6 btn  bg-info" onclick="caluclate()" ><font size="2px">caluclate</font></button>
+		</div>
+</center>
+	</div>
+	</div>
+
+	</div>
+	</center>
+</div>
+
+
+
+</div>
+</body>
+	<script type="text/javascript" src="molarity.js"></script>
+
+</html>

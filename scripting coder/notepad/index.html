@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding: 0px;
+		}
+		.cl{
+			display:inline;
+		}
+		#names{
+			height: 550px;
+			width:1250px;
+			border: 5px solid black;
+			font-size: 25px;
+		}
+		a{
+			color: black;
+			text-decoration: none;
+		}
+		 a:hover{
+        font-size: 20px;
+    }
+
+	</style>
+</head>
+<body>
+	<button onclick="clickt()" style="width:50px;height:30px;position:fixed;box-shadow: 1px 1px 8px mediumturquoise;background-color:lightgoldenrodyellow ;border-radius: 5px;">Menu</button>
+			<br/>
+	<br/>
+	
+	<br/>
+	
+			<div style="height:330px;width:150px;background-color:rgba(251, 250, 250, 0.8);position: fixed;top:30px;border-radius: 8px;text-align:center;box-shadow: 1px 1px 10px aquamarine;" id="men1">
+				<br>
+				<br>
+				<a href="main.html">home</a>
+				<br>
+				<br>
+
+				<a href="caluclatorroute.html">caluclator</a>
+				<br>
+				<br>
+
+<a  href="music app/Music web.html" class='a1'>Music Player</a>
+<br>		
+<br>
+				<a href="gameroute.html"> games</a>
+				<br>
+				<br>
+
+				<a href="converterroute.html">converter</a>
+<br>
+<br>
+<a href="library/books.html" >Web library</a>
+<br>
+<br>
+		<a href="quize/quize1.html">quiz</a>
+<br>
+		<br>
+		<a href="periodic.html" class='a1' > periodic table</a>
+
+			</div>
+	<button onclick="sor()" style="position: relative;left:980px">store</button>
+<button onclick="sot()" style="position:relative;left:1000px"> retrive</button>
+<button onclick="clor()" style="position:relative;left:1030px"> clear</button>
+
+<button onclick="soj()" style="position:relative;left:1060px">Delete</button>
+
+<br>
+<br>
+
+<textarea id="names" >
+	
+</textarea>
+
+
+
+
+
+<script type="text/javascript">
+	sor=()=>
+	{
+		let sto=document.getElementById('names').value;
+		localStorage.setItem('name',sto)
+
+	}
+	sot=()=>
+	{
+		localStorage.sto
+document.getElementById('names').value=localStorage.getItem('name');
+
+}
+soj=()=>
+{
+		localStorage.sto
+localStorage.removeItem('name');
+document.getElementById('names').value="";
+
+}
+clor=()=>
+{
+	
+document.getElementById('names').value="";
+
+}
+
+document.getElementById('men1').style.display="none"
+let i=0;
+clickt=()=>
+{
+i++;
+let kt=document.getElementById('men1').style.display="block"
+if(i==2)
+{
+let kt=document.getElementById('men1').style.display="none"
+i=0;
+}
+}
+</script>
+</body>
+</html>

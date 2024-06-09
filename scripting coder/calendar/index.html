@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>calendar</title>
+<style type="text/css">
+	input{
+		height: 25px;
+		width: auto;
+		margin-top: 35px;
+		border-radius: 10px;
+		font-size: 20px;
+	}
+	button{
+		border-radius: 5px;
+		height: 30px;
+		font-size: 17px;
+	}
+
+</style>
+</head>
+<body style="background-color: gray;">
+	<center><h1>calendar</h1></center>
+	<center><div style="height: 200px;width: 400px;background-color: lightgray;box-shadow: 2px 3px 5px black;margin-top: 140px;border-radius:50px">
+<input type="text" name="day" id="day" placeholder="Enter Day">
+<br>
+<input type="number" name="count" id="count" placeholder="Enter count">
+<br>
+<br>
+<button onclick="tell()" >get day</button>
+</div>
+<div style="height:60px;width: 500px;margin-top: 30px;background-color: white;color: black;border-radius:20px;box-shadow: 2px 2px 4px black;font-size: 25px;" id="output"></div>
+</center>
+
+<script type="text/javascript">
+	tell=()=>{
+	var day=document.getElementById('day').value;
+	var count=document.getElementById('count').value;
+	var out=document.getElementById('output');
+let val=count%7;
+if(val==1)
+{
+	if(day=="monday"||day=="MONDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>tuesday</b>";
+	}
+	else if(day=="tuesday"||day=="TUESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>wednesday</b>";
+	}
+	else if(day=="wednesday"||day=="WEDNESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>thursday</b>";
+	}
+	else if(day=="thursday"||day=="THURSDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>friday</b>";
+	}
+	else if(day=="friday"||day=="FRIDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>saturday</b>";
+	}
+	else if(day=="saturday"||day=="SATURDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>sunday</b>";
+	}
+	else if(day=="sunday"||day=="SUNDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>monday</b>";
+	}
+	}
+
+	else if(val==2)
+{
+	if(day=="monday"||day=="MONDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>wednesday</b>";
+	}
+	else if(day=="tuesday"||day=="TUESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>thursday</b>";
+	}
+	else if(day=="wednesday"||day=="WEDNESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>friday</b>";
+	}
+	else if(day=="thursday"||day=="THURSDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>saturday</b>";
+	}
+	else if(day=="friday"||day=="FRIDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>sunday</b>";
+	}
+	else if(day=="saturday"||day=="SATURDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>monday</b>";
+	}
+	else if(day=="sunday"||day=="SUNDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>tuesday</b>";
+	}
+	}
+
+
+else if(val==3)
+{
+	if(day=="monday"||day=="MONDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>thursday</b>";
+	}
+	else if(day=="tuesday"||day=="TUESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>friday</b>";
+	}
+	else if(day=="wednesday"||day=="WEDNESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>saturday</b>";
+	}
+	else if(day=="thursday"||day=="THURSDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>sunday</b>";
+	}
+	else if(day=="friday"||day=="FRIDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>monday</b>";
+	}
+	else if(day=="saturday"||day=="SATURDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>tuesday</b>";
+	}
+	else if(day=="sunday"||day=="SUNDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b> wednesday</b>";
+	}
+	}
+
+
+else if(val==4)
+{
+	if(day=="monday"||day=="MONDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>friday</b>";
+	}
+	else if(day=="tuesday"||day=="TUESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>saturday</b>";
+	}
+	else if(day=="wednesday"||day=="WEDNESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>sunday</b>";
+	}
+	else if(day=="thursday"||day=="THURSDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>monday</b>";
+	}
+	else if(day=="friday"||day=="FRIDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>tuesday</b>";
+	}
+	else if(day=="saturday"||day=="SATURDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>wednesday</b>";
+	}
+	else if(day=="sunday"||day=="SUNDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>thursday</b>";
+	}
+	}
+else if(val==5)
+
+{
+	if(day=="monday"||day=="MONDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>saturday</b>";
+	}
+	else if(day=="tuesday"||day=="TUESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>sunday</b>";
+	}
+	else if(day=="wednesday"||day=="WEDNESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>monday</b>";
+	}
+	else if(day=="thursday"||day=="THURSDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>tuesday</b>";
+	}
+	else if(day=="friday"||day=="FRIDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>wednesday</b>";
+	}
+	else if(day=="saturday"||day=="SATURDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>thursday</b>";
+	}
+	else if(day=="sunday"||day=="SUNDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>friday</b>";
+	}
+	}
+
+
+	else if(val==6)
+
+{
+	if(day=="monday"||day=="MONDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>sunday</b>";
+	}
+	else if(day=="tuesday"||day=="TUESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>monday</b>";
+	}
+	else if(day=="wednesday"||day=="WEDNESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>tuesday</b>";
+	}
+	else if(day=="thursday"||day=="THURSDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>wednesday</b>";
+	}
+	else if(day=="friday"||day=="FRIDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>thursday</b>";
+	}
+	else if(day=="saturday"||day=="SATURDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>friday</b>";
+	}
+	else if(day=="sunday"||day=="SUNDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>saturday</b>";
+	}
+	}
+
+
+	else if(val==7)
+
+{
+	if(day=="monday"||day=="MONDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>monday</b>";
+	}
+	else if(day=="tuesday"||day=="TUESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>tuesday</b>";
+	}
+	else if(day=="wednesday"||day=="WEDNESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>wednesday</b>";
+	}
+	else if(day=="thursday"||day=="THURSDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>thurday</b>";
+	}
+	else if(day=="friday"||day=="FRIDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>friday</b>";
+	}
+	else if(day=="saturday"||day=="SATURDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>saturday</b>";
+	}
+	else if(day=="sunday"||day=="SUNDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>sunday</b>";
+	}
+	}
+
+
+	else if(val==0)
+
+{
+	if(day=="monday"||day=="MONDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>monday</b>";
+	}
+	else if(day=="tuesday"||day=="TUESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>tuesday</b>";
+	}
+	else if(day=="wednesday"||day=="WEDNESDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>wednesday</b>";
+	}
+	else if(day=="thursday"||day=="THURSDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>thursday</b>";
+	}
+	else if(day=="friday"||day=="FRIDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>friday</b>";
+	}
+	else if(day=="saturday"||day=="SATURDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>saturday</b>";
+	}
+	else if(day=="sunday"||day=="SUNDAY")
+	{
+out.innerHTML="The day after the given number of days is"+" "+"<b>sunday</b>";
+	}
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html oncopy="return false" oncut="return false" >
+<!-- oncontextmenu="return false" -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="concentration.css">
+</head>
+ <body background="images/chemo.jpg" style="background-repeat: no-repeat;background-size: cover;" >
+<div class="container-fluid">
+	<select onchange="concen(this.value)" id="mai">
+		<option value="molal">--select--</option>
+
+	<option value="mol">molarity</option>
+		<option value="nor">normality</option>
+		<option value="molity">mol<->norm</option>
+
+
+	</select>
+<div class="row mt-5"  id="main">
+	<span id="note">Note:leave the unknown value </span>
+	<center>
+	<div class="col-8 ">
+		<div class="card bg-danger">
+			<!-- first row -->
+			<div class="row-md-5">
+<label  for="gmwt" class="col-7" id="gmt">G.M.WT(M):</label>
+		<input type="number" id="gmwt" class="col-4">
+			
+	</div>
+			<!-- /first rows -->
+			<!-- second row -->
+
+	<div class="row-md-6">
+<label  for="volume" class="col-7" id="volm">VOLUME(ml):</label>
+
+		<input type="number" id="volume" class="col-4">
+	</div>
+			<!-- //second row -->
+		<!-- third row -->
+<div class="row-md-6">
+	<label  for="weight" class="col-7" id="weig">WEIGHT(g):</label>
+
+		<input type="number" id="weight" class="col-4">
+	</div>
+		<!-- //third row -->
+<!-- fourth row -->
+<div class="row-md-6">
+<label  for="molarity" class="col-7" id="molr">MOLARITY(M):</label>
+
+		<input type="number" id="molarity" class="col-4">
+</div>
+<!-- //fifth row -->
+<div class="row">
+	<center>
+	<div class="col-12">
+	<button class=" col-6 btn  bg-info" onclick="caluclate()" ><font size="2px">caluclate</font></button>
+		</div>
+</center>
+	</div>
+	</div>
+	<br/>
+	<br/>
+	<br/>
+	
+	
+	
+
+
+	Created by 
+	<br><a href="https://www.linkedin.com/in/janardhana-rajesh-k-230778294/" id="aut">janardhana rajesh</a>
+
+	</div>
+	</center>
+</div>
+
+
+
+</div>
+</body>
+	<script type="text/javascript" src="concentration.js"></script>
+
+</html>

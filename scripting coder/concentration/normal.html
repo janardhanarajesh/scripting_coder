@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="concentration.css">
+	<script type="text/javascript" src="concent.js"></script>
+<style type="text/css"></style>
+</head>
+<body background="images/chemi.jpg"  style="background-repeat: no-repeat;background-size: cover;" id="">
+
+<div class="container-fluid">
+	<select onchange="concen(this.value)" id="mai">
+		<option value="molal">--select--</option>
+
+	<option value="mol">molarity</option>
+		<option value="nor">normality</option>
+		<option value="molity">mol<->norm</option>
+
+
+	</select>
+<div class="row mt-5"  id="main">
+	<p id="note">Note:Select The Chemical After Filling All Values</p>
+	<center>
+	<div class="col-8 ">
+		<div class="card bg-danger">
+			<!-- first row -->
+			<div class="row-md-5 mt-3">
+				<label for="chemical" id="lab" class="col-7">CHEMICAL:</label>
+<select onchange="chemical(this.value)" id="chemical" class="col-4">
+	<option>select</option>
+	<option value="1">HCl</option>
+	<option value="2">H2SO4</option>
+	<option value="3">HNO3</option>
+	<option value="4">CH3COOH</option>
+	<option value="5">C2H2O4</option>
+	<option value="6">NaOH</option>
+	<option value="7">KOH</option>
+	<option value="8">Ca(OH)2</option>
+	<option value="9">NH4OH</option>
+	<option value="10">Na2CO3</option>
+	<option value="11">NaHCO3</option>
+	<option value="12">NaCl</option>
+	<option value="13">H3PO4</option>
+	<option value="14">H3PO3</option>
+	<option value="15">H2PO3</option>
+	<option value="16">H2CO3</option>
+	
+
+</select>
+	</div>
+			<!-- /first rows -->
+			<!-- second row -->
+
+	<div class="row-md-6">
+<label  for="volume" class="col-7" id="volm">VOLUME(ml):</label>
+
+		<input type="number" id="volume" class="col-4">
+	</div>
+			<!-- //second row -->
+		<!-- third row -->
+<div class="row-md-6">
+	<label  for="weight" class="col-7" id="weig">WEIGHT(g):</label>
+
+		<input type="number" id="weight" class="col-4">
+	</div>
+		<!-- //third row -->
+<!-- fourth row -->
+<div class="row-md-6">
+<label  for="normality" class="col-7" id="molr">NORMALITY(N):</label>
+
+		<input type="number" id="normality" class="col-4">
+</div>
+<!-- //fifth row -->
+<div class="row">
+	<center>
+	<div class="col-12">
+	<button class=" col-6 btn  bg-info" onclick="caluclate()"><font size="2px">caluclate</font></button>
+		</div>
+</center>
+	</div>
+	</div>
+	</div>
+	</center>
+</div>
+
+
+
+</div>
+</body>
+</html>
